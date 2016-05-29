@@ -15,8 +15,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import cn.hudp.androiddevartnote.MyConfig;
-import cn.hudp.androiddevartnote.MyUtils;
+import cn.hudp.androiddevartnote.Common.MyConfig;
+import cn.hudp.androiddevartnote.Common.MyUtils;
 import cn.hudp.androiddevartnote.R;
 
 public class IPC2Activity extends AppCompatActivity implements View.OnClickListener {
@@ -81,7 +81,9 @@ public class IPC2Activity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onDestroy() {
-        unbindService(mConnection);
+        if (mConnection != null) {
+//            unbindService(mConnection);
+        }
         super.onDestroy();
     }
 

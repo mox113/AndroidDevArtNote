@@ -2,7 +2,6 @@ package cn.hudp.androiddevartnote.IPC_2;
 
 import android.app.Service;
 import android.content.Intent;
-import android.os.Binder;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
@@ -11,8 +10,8 @@ import android.os.Messenger;
 import android.os.RemoteException;
 import android.util.Log;
 
-import cn.hudp.androiddevartnote.MyConfig;
-import cn.hudp.androiddevartnote.MyUtils;
+import cn.hudp.androiddevartnote.Common.MyConfig;
+import cn.hudp.androiddevartnote.Common.MyUtils;
 
 /**
  * Messenger的服务端,在单独的进程中。

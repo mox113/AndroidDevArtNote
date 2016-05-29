@@ -1,4 +1,4 @@
-package cn.hudp.androiddevartnote;
+package cn.hudp.androiddevartnote.Common;
 
 import android.app.ActivityManager;
 import android.content.Context;

@@ -1,4 +1,4 @@
-package cn.hudp.androiddevartnote;
+package cn.hudp.androiddevartnote.Common;
 
 /**
  * Created by HuDP on 16/5/27.

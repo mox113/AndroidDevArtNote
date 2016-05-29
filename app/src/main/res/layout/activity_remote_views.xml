@@ -11,15 +11,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18dp"
-        android:text="《Android开发艺术探索》练习代码" />
+        android:text="《Android开发艺术探索》第五章 理解RemoveViews" />
 
-    <ListView
-        android:id="@+id/lv_main"
+    <Button
+        android:id="@+id/btn"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:divider="#cccccc"
-        android:dividerHeight="2dp" />
-
+        android:layout_height="wrap_content"
+        android:text="发送一个通知" />
 </LinearLayout>
-
