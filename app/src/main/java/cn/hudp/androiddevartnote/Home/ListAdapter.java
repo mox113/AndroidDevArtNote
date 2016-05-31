@@ -1,4 +1,4 @@
-package cn.hudp.androiddevartnote.Common;
+package cn.hudp.androiddevartnote.Home;
 
 import android.app.Activity;
 import android.content.Context;

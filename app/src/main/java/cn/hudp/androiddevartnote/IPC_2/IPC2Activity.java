@@ -15,8 +15,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import cn.hudp.androiddevartnote.Common.MyConfig;
-import cn.hudp.androiddevartnote.Common.MyUtils;
+import cn.hudp.androiddevartnote.Home.MyConfig;
+import cn.hudp.androiddevartnote.Home.MyUtils;
 import cn.hudp.androiddevartnote.R;
 
 public class IPC2Activity extends AppCompatActivity implements View.OnClickListener {

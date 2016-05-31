@@ -27,7 +27,7 @@ public class LinkList {
 
     public void delNode(Object obj) {
         if (root.next.equals(obj)) {
-            root = root.next;
+            root = root.next; //如果匹配 则将后一个Note赋值给当前Note 原来的Note引用就变成后面那个啦。
         } else {
             root.del(obj);
         }

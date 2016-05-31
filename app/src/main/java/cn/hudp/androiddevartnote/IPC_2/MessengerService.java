@@ -10,8 +10,8 @@ import android.os.Messenger;
 import android.os.RemoteException;
 import android.util.Log;
 
-import cn.hudp.androiddevartnote.Common.MyConfig;
-import cn.hudp.androiddevartnote.Common.MyUtils;
+import cn.hudp.androiddevartnote.Home.MyConfig;
+import cn.hudp.androiddevartnote.Home.MyUtils;
 
 /**
  * Messenger的服务端,在单独的进程中。

@@ -5,18 +5,22 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.RemoteViews;
 
-import cn.hudp.androiddevartnote.Common.MainActivity;
+import cn.hudp.androiddevartnote.Home.MainActivity;
 import cn.hudp.androiddevartnote.R;
 
 public class RemoteViewsActivity extends AppCompatActivity {
     public Button btn;
+    public LinearLayout llRemoteViews;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +30,30 @@ public class RemoteViewsActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 showNotification();
+                showNotification();
             }
         });
+        llRemoteViews = (LinearLayout) findViewById(R.id.ll_remoteviews);
+        initRemoveViews();
+    }
+
+    /**
+     * 加载其他App的资源文件
+     */
+    private void initRemoveViews() {
+        final String pkg = "cn.hudp.remoteviews";//需要加载app的包名
+        Resources resources = null;
+        try {
+            resources = getPackageManager().getResourcesForApplication(pkg);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        if (resources != null) {
+            int layoutId = resources.getIdentifier("activity_main", "layout", pkg);
+            RemoteViews remoteViews = new RemoteViews(pkg, layoutId);
+            View view = remoteViews.apply(this, llRemoteViews);//llRemoteViews是View所在的父容器
+            llRemoteViews.addView(view);
+        }
     }
 
     public void showNotification() {

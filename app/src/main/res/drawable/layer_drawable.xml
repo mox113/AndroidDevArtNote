@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/res_haimei1"
+        android:bottom="10dp"
+        android:drawable="@mipmap/haimei1"
+        android:left="10dp"
+        android:right="10dp"
+        android:top="10dp" />
+
+    <item
+        android:id="@+id/res_icon"
+        android:width="30dp"
+        android:height="30dp"
+        android:drawable="@mipmap/ic_launcher"
+        android:gravity="center" />
+</layer-list>

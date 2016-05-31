@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Common.MainActivity">
+        <activity android:name=".Home.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,7 +41,10 @@
 
         <activity android:name=".Other.BinaryTree.BinaryTreeActivity" />
         <activity android:name=".Other.Permission.PermissionActivity" />
-        <activity android:name=".Other.BubbleSort.BubbleSortActivity"></activity>
+        <activity android:name=".Other.BubbleSort.BubbleSortActivity" />
+        <activity android:name=".Other.Image.ImageActivity" />
+        <activity android:name=".Drawable_6.DrawableActivity" />
+        <activity android:name=".BitmapLoadCache_12.BitmapActivity"></activity>
     </application>
 
 </manifest>
