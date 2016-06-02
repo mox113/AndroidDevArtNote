@@ -15,6 +15,7 @@ import cn.hudp.androiddevartnote.Other.LinkList.LinkActivity;
 import cn.hudp.androiddevartnote.Other.Permission.PermissionActivity;
 import cn.hudp.androiddevartnote.R;
 import cn.hudp.androiddevartnote.RemoveViews_5.RemoteViewsActivity;
+import cn.hudp.androiddevartnote.Synthesis_13.SynthesisActivity;
 
 //import cn.hudp.androiddevartnote.Other.Permission.PermissionActivity;
 
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(new ListInfo("第二章 IPC机制", IPC2Activity.class));
         list.add(new ListInfo("第五章 理解RemoveViews", RemoteViewsActivity.class));
         list.add(new ListInfo("第六章 Android的Drawable", DrawableActivity.class));
+        list.add(new ListInfo("第十三章 综合技术", SynthesisActivity.class));
         list.add(new ListInfo("其他 链表", LinkActivity.class));
         list.add(new ListInfo("其他 二叉树", BinaryTreeActivity.class));
         list.add(new ListInfo("其他 权限管理", PermissionActivity.class));
