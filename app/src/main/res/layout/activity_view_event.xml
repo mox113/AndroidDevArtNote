@@ -1,12 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="cn.hudp.androiddevartnote.ViewEvent_3.ViewEventActivity">
+    android:paddingTop="@dimen/activity_vertical_margin">
 
-</RelativeLayout>
+    <cn.hudp.androiddevartnote.ViewEvent_3.TestView
+        android:id="@+id/testView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#ccc"
+        android:text="TestView" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:text="按钮" />
+
+    <cn.hudp.androiddevartnote.ViewEvent_3.TestViewGroup
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#ccc">
+
+        <cn.hudp.androiddevartnote.ViewEvent_3.TestView
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:background="#30123456"
+            android:text="testView2" />
+    </cn.hudp.androiddevartnote.ViewEvent_3.TestViewGroup>
+
+    <cn.hudp.androiddevartnote.ViewEvent_3.HorizontalScrollViewEx
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></cn.hudp.androiddevartnote.ViewEvent_3.HorizontalScrollViewEx>
+</LinearLayout>

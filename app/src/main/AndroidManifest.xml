@@ -73,7 +73,11 @@
         <activity android:name=".Other.Image.ImageActivity" />
         <activity android:name=".Drawable_6.DrawableActivity" />
         <activity android:name=".BitmapLoadCache_12.BitmapActivity" />
-        <activity android:name=".Synthesis_13.SynthesisActivity"></activity>
+        <activity android:name=".Synthesis_13.SynthesisActivity" />
+        <activity
+            android:name=".Activity_1.SingleInstanceActivity"
+            android:launchMode="singleInstance" />
+        <activity android:name=".Window_8.WindowActivity"></activity>
     </application>
 
 </manifest>

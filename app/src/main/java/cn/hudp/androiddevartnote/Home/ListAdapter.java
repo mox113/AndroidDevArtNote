@@ -18,6 +18,7 @@ import cn.hudp.androiddevartnote.R;
  * Created by HuDP on 16/5/28.
  */
 public class ListAdapter extends BaseAdapter {
+//    public Tclick tclick = new Tclick();
     protected Context mContext;
     private List<ListInfo> list;
     private LayoutInflater inflater = null;
@@ -32,7 +33,6 @@ public class ListAdapter extends BaseAdapter {
     public int getCount() {
         return list.size();
     }
-
 
     @Override
     public Object getItem(int position) {
@@ -75,10 +75,32 @@ public class ListAdapter extends BaseAdapter {
                 }
             }
         });
+//        tclick.setData(position);
+//        viewHolder.tvName.setOnClickListener(tclick);
         return convertView;
     }
 
     public static class ViewHolder {
         public TextView tvName;
     }
+
+//    class Tclick implements View.OnClickListener {
+//        public int position;
+//
+//        public void setData(int position) {
+//            this.position = position;
+//        }
+//
+//        @Override
+//        public void onClick(View v) {
+//            Class clz = list.get(position).getActivityClass();
+//            if (clz != null) {
+//                Intent intent = new Intent();
+//                intent.setClass(mContext, clz);
+//                mContext.startActivity(intent);
+//            } else {
+//                Toast.makeText(mContext, "未找到" + list.get(position).getShow(), Toast.LENGTH_SHORT).show();
+//            }
+//        }
+//    }
 }
