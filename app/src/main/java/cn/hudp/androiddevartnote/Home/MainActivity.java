@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         lvMain = (ListView) findViewById(R.id.lv_main);
         initData();
-
     }
 
     private void initData() {
