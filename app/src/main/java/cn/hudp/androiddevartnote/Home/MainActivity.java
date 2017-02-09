@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.hudp.androiddevartnote.Activity_1.SingleInstanceActivity;
+import cn.hudp.androiddevartnote.Builder.BuilderActivity;
 import cn.hudp.androiddevartnote.Drawable_6.DrawableActivity;
 import cn.hudp.androiddevartnote.IPC_2.IPC2Activity;
 import cn.hudp.androiddevartnote.Other.BinaryTree.BinaryTreeActivity;
@@ -16,6 +17,7 @@ import cn.hudp.androiddevartnote.Other.LinkList.LinkActivity;
 import cn.hudp.androiddevartnote.Other.Permission.PermissionActivity;
 import cn.hudp.androiddevartnote.R;
 import cn.hudp.androiddevartnote.RemoveViews_5.RemoteViewsActivity;
+import cn.hudp.androiddevartnote.Retrofit.RetrofitActivity;
 import cn.hudp.androiddevartnote.Synthesis_13.SynthesisActivity;
 import cn.hudp.androiddevartnote.ViewEvent_3.ViewEventActivity;
 import cn.hudp.androiddevartnote.Window_8.WindowActivity;
@@ -52,9 +54,11 @@ public class MainActivity extends AppCompatActivity {
         list.add(new ListInfo("第12章 Bitmap的加载和Cache", null));
         list.add(new ListInfo("第13章 综合技术", SynthesisActivity.class));
         list.add(new ListInfo("其他 链表", LinkActivity.class));
+        list.add(new ListInfo("其他 建造者模式", BuilderActivity.class));
         list.add(new ListInfo("其他 二叉树", BinaryTreeActivity.class));
         list.add(new ListInfo("其他 权限管理", PermissionActivity.class));
         list.add(new ListInfo("其他 冒泡排序", BubbleSortActivity.class));
+        list.add(new ListInfo("其他 Retrofit", RetrofitActivity.class));
 
         adapter = new ListAdapter(MainActivity.this, list);
         lvMain.setAdapter(adapter);
