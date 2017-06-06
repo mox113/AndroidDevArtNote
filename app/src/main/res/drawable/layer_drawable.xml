@@ -3,7 +3,7 @@
     <item
         android:id="@+id/res_haimei1"
         android:bottom="10dp"
-        android:drawable="@mipmap/haimei1"
+        android:drawable="@mipmap/ic_launcher"
         android:left="10dp"
         android:right="10dp"
         android:top="10dp" />

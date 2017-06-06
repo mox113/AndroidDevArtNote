@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <!--<gradient-->
+        <!--android:angle="0"-->
+        <!--android:centerColor="@color/colorPrimaryDark"-->
+        <!--android:centerX="10"-->
+        <!--android:centerY="20"-->
+        <!--android:endColor="@color/colorAccent"-->
+        <!--android:gradientRadius="10dp"-->
+        <!--android:startColor="#ffffff"-->
+        <!--android:type="linear"-->
+        <!--android:useLevel="false" />&lt;!&ndash;渐变填充&ndash;&gt;-->
+
+    <solid android:color="#cccccc" /><!--纯色填充-->
+    <stroke
+        android:width="1dp"
+        android:color="@color/colorAccent"
+        android:dashGap="0dp"
+        android:dashWidth="0dp" /><!--描边-->
+
+    <padding
+        android:bottom="5dp"
+        android:left="5dp"
+        android:right="5dp"
+        android:top="5dp" /><!--包含他的View的空白 填充-->
+
+    <size
+        android:width="200dp"
+        android:height="50dp" />
+    <!--shape的大小 获取Drawable宽高的话 就是获取这个，
+        如果该Drawable作为背景，shape还是会拉伸或缩小为View的大小-->
+</shape>

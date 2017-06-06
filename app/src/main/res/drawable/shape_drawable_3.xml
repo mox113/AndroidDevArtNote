@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="line">
+
+    <stroke
+        android:width="1dp"
+        android:color="@color/colorAccent"
+        android:dashGap="0dp"
+        android:dashWidth="0dp" /><!--描边-->
+
+    <size
+        android:width="200dp"
+        android:height="50dp" />
+    <!--shape的大小 获取Drawable宽高的话 就是获取这个，
+        如果该Drawable作为背景，shape还是会拉伸或缩小为View的大小-->
+</shape>

@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 import android.support.multidex.MultiDex;
 
+import com.facebook.stetho.Stetho;
+
 import cn.hudp.androiddevartnote.Synthesis_13.CrashHandler;
 
 /**
@@ -15,7 +17,7 @@ public class BaseApplication extends Application {
         super.onCreate();
         CrashHandler crashHandler = CrashHandler.getInstance();
         crashHandler.init(this);
-
+        Stetho.initializeWithDefaults(this);
     }
 
     @Override

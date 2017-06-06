@@ -5,5 +5,5 @@
     android:filter="true"
     android:gravity="center"
     android:mipMap="false"
-    android:src="@mipmap/haimei1"
-    android:tileMode="clamp"></bitmap>
+    android:src="@mipmap/ic_launcher"
+   /><!-- android:tileMode="clamp"-->
