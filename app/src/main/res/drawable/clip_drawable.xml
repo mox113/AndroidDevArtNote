@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <clip xmlns:android="http://schemas.android.com/apk/res/android"
     android:clipOrientation="horizontal"
-    android:drawable="@mipmap/haimei2"
+    android:drawable="@mipmap/icon_user"
     android:gravity="center">
 </clip>

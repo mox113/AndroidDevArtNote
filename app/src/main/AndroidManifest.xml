@@ -79,7 +79,8 @@
             android:launchMode="singleInstance" />
         <activity android:name=".Window_8.WindowActivity" />
         <activity android:name=".Builder.BuilderActivity" />
-        <activity android:name=".Retrofit.RetrofitActivity"></activity>
+        <activity android:name=".Retrofit.RetrofitActivity" />
+        <activity android:name=".Anim_7.AnimActivity"></activity>
     </application>
 
 </manifest>

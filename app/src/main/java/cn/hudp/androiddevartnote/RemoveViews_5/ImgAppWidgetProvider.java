@@ -41,11 +41,11 @@ public class ImgAppWidgetProvider extends AppWidgetProvider {
     public void updateView(Context context, RemoteViews remoteViews, AppWidgetManager appWidgetManager) {
         index = (int) (Math.random() * 3);
         if (index == 1) {
-            remoteViews.setImageViewResource(R.id.iv, R.mipmap.haimei1);
+            remoteViews.setImageViewResource(R.id.iv, R.mipmap.ic_launcher);
         } else if (index == 2) {
-            remoteViews.setImageViewResource(R.id.iv, R.mipmap.haimei2);
+            remoteViews.setImageViewResource(R.id.iv, R.mipmap.logo);
         } else {
-            remoteViews.setImageViewResource(R.id.iv, R.mipmap.haimei3);
+            remoteViews.setImageViewResource(R.id.iv, R.mipmap.logo);
         }
         Intent clickIntent = new Intent();
         clickIntent.setAction(CLICK_ACTION);

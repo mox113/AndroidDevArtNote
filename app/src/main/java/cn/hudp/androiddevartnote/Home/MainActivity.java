@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.hudp.androiddevartnote.Activity_1.SingleInstanceActivity;
+import cn.hudp.androiddevartnote.Anim_7.AnimActivity;
 import cn.hudp.androiddevartnote.Builder.BuilderActivity;
 import cn.hudp.androiddevartnote.Drawable_6.DrawableActivity;
 import cn.hudp.androiddevartnote.IPC_2.IPC2Activity;
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(new ListInfo("第4章 View的工作原理", null));
         list.add(new ListInfo("第5章 理解RemoveViews", RemoteViewsActivity.class));
         list.add(new ListInfo("第6章 Android的Drawable", DrawableActivity.class));
-        list.add(new ListInfo("第7章 动画深入分析", null));
+        list.add(new ListInfo("第7章 动画深入分析", AnimActivity.class));
         list.add(new ListInfo("第8章 理解Window和WindowManager（未学完）", WindowActivity.class));
         list.add(new ListInfo("第9章 四大组件的工作过程（未学完）", null));
         list.add(new ListInfo("第10章 Android的消息机制", null));

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_translate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="#abcdef"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="平移动画" />
+
+        <TextView
+            android:id="@+id/tv_scale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="#abcdef"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="缩放动画" />
+
+        <TextView
+            android:id="@+id/tv_rotate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="#abcdef"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="旋转动画" />
+
+        <TextView
+            android:id="@+id/tv_alpha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="#abcdef"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="透明度动画" />
+    </LinearLayout>
+</ScrollView>
