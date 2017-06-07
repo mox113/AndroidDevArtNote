@@ -18,10 +18,7 @@
             android:src="@drawable/bitmap_drawable" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginBottom="20dp"
+            style="@style/text_part_line"
             android:text="Bitmap Drawable" />
 
         <Button
@@ -46,10 +43,7 @@
             android:background="@drawable/shape_drawable_4" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginBottom="20dp"
+            style="@style/text_part_line"
             android:text="Shape Drawable（矩形/椭圆/横线/圆环）" />
 
         <ImageView
@@ -57,11 +51,13 @@
             android:layout_height="100dp"
             android:src="@drawable/layer_drawable" />
 
-        <TextView
-            android:layout_width="wrap_content"
+        <EditText
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginBottom="20dp"
+            android:src="@drawable/layer_drawable_2" />
+
+        <TextView
+            style="@style/text_part_line"
             android:text="Layer Drawable" />
 
         <Button
@@ -69,10 +65,18 @@
             android:layout_height="wrap_content"
             android:background="@drawable/state_list_drawable" />
 
+        <TextView
+            style="@style/text_part_line"
+            android:text="StateList Drawable (select)" />
+
         <ImageView
             android:id="@+id/iv_levei"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/scale_drawable" />
+            android:src="@drawable/levei_list_drawable" />
+
+        <TextView
+            style="@style/text_part_line"
+            android:text="LevelList Drawable" />
     </LinearLayout>
 </ScrollView>

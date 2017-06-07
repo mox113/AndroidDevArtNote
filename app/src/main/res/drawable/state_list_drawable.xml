@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:constantSize="false"
+    android:constantSize="true"
     android:dither="true"
     android:variablePadding="false">
-    <item android:drawable="@mipmap/ic_launcher" android:state_pressed="true" />
-    <item android:drawable="@mipmap/ic_launcher" android:state_pressed="false" />
+    <!--constantSize 保证固有大小不变-->
+    <!--dither是否开启抖动-->
+    <!--variablePadding表示该drawable的padding是否随着其状态改变而改变-->
+    <item android:drawable="@mipmap/icon_user" android:state_pressed="true" />
+    <item android:drawable="@color/colorPrimary" android:state_pressed="false" />
 </selector>
