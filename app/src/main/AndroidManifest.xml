@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.BATTERY_STATS" />
     <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
     <uses-permission android:name="android.permission.RESTART_PACKAGES" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -28,6 +29,7 @@
     <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application
         android:name=".Home.BaseApplication"
@@ -80,7 +82,11 @@
         <activity android:name=".Window_8.WindowActivity" />
         <activity android:name=".Builder.BuilderActivity" />
         <activity android:name=".Retrofit.RetrofitActivity" />
-        <activity android:name=".Anim_7.AnimActivity"></activity>
+        <activity android:name=".Anim_7.AnimActivity" />
+
+        <service android:name=".Window_8.FloatWindowService" />
+
+        <activity android:name=".Anim_7.SvgAnimActivity"></activity>
     </application>
 
 </manifest>

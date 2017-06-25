@@ -1,5 +1,6 @@
 package cn.hudp.androiddevartnote.Home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
@@ -21,9 +22,8 @@ import cn.hudp.androiddevartnote.RemoveViews_5.RemoteViewsActivity;
 import cn.hudp.androiddevartnote.Retrofit.RetrofitActivity;
 import cn.hudp.androiddevartnote.Synthesis_13.SynthesisActivity;
 import cn.hudp.androiddevartnote.ViewEvent_3.ViewEventActivity;
+import cn.hudp.androiddevartnote.Window_8.FloatWindowService;
 import cn.hudp.androiddevartnote.Window_8.WindowActivity;
-
-//import cn.hudp.androiddevartnote.Other.Permission.PermissionActivity;
 
 public class MainActivity extends AppCompatActivity {
     protected ListView lvMain;
@@ -35,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         lvMain = (ListView) findViewById(R.id.lv_main);
+
+        Intent intent = new Intent(MainActivity.this,FloatWindowService.class);
+        startService(intent);
         initData();
     }
 

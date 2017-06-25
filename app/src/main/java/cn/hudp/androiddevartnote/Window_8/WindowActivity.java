@@ -1,6 +1,7 @@
 package cn.hudp.androiddevartnote.Window_8;
 
 import android.animation.ValueAnimator;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -11,7 +12,7 @@ import android.widget.Button;
 import cn.hudp.androiddevartnote.R;
 
 public class WindowActivity extends AppCompatActivity {
-    Button btn;
+    Button btn, btn_start_window;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,16 @@ public class WindowActivity extends AppCompatActivity {
                 dimBackground(1.0f, 0.3f);
             }
         });
+
+        btn_start_window = (Button) findViewById(R.id.btn_start_window);
+        btn_start_window.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(WindowActivity.this,FloatWindowService.class);
+                startService(intent);
+            }
+        });
+//        MyWindowManager.createSmallWindow(getApplicationContext());
     }
 
     //Activity 变暗

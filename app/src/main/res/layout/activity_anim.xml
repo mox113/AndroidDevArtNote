@@ -47,5 +47,15 @@
             android:gravity="center_vertical"
             android:padding="10dp"
             android:text="透明度动画" />
+
+        <Button
+            android:id="@+id/btn_svg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="#abcdef"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="svg动画" />
     </LinearLayout>
 </ScrollView>
