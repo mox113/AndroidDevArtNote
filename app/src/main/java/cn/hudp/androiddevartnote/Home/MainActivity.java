@@ -1,6 +1,5 @@
 package cn.hudp.androiddevartnote.Home;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
@@ -11,6 +10,7 @@ import java.util.List;
 import cn.hudp.androiddevartnote.Activity_1.SingleInstanceActivity;
 import cn.hudp.androiddevartnote.Anim_7.AnimActivity;
 import cn.hudp.androiddevartnote.Builder.BuilderActivity;
+import cn.hudp.androiddevartnote.Common.Utils.StatusBarUtil;
 import cn.hudp.androiddevartnote.Drawable_6.DrawableActivity;
 import cn.hudp.androiddevartnote.IPC_2.IPC2Activity;
 import cn.hudp.androiddevartnote.Other.BinaryTree.BinaryTreeActivity;
@@ -22,7 +22,6 @@ import cn.hudp.androiddevartnote.RemoveViews_5.RemoteViewsActivity;
 import cn.hudp.androiddevartnote.Retrofit.RetrofitActivity;
 import cn.hudp.androiddevartnote.Synthesis_13.SynthesisActivity;
 import cn.hudp.androiddevartnote.ViewEvent_3.ViewEventActivity;
-import cn.hudp.androiddevartnote.Window_8.FloatWindowService;
 import cn.hudp.androiddevartnote.Window_8.WindowActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,11 +32,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        StatusBarUtil.StatusBarLightMode(this);
         setContentView(R.layout.activity_main);
         lvMain = (ListView) findViewById(R.id.lv_main);
 
-        Intent intent = new Intent(MainActivity.this,FloatWindowService.class);
-        startService(intent);
+//        Intent intent = new Intent(MainActivity.this,FloatWindowService.class);
+//        startService(intent);
         initData();
     }
 
