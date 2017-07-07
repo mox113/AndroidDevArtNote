@@ -1,5 +1,6 @@
 package cn.hudp.androiddevartnote.Home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
@@ -17,11 +18,14 @@ import cn.hudp.androiddevartnote.Other.BinaryTree.BinaryTreeActivity;
 import cn.hudp.androiddevartnote.Other.BubbleSort.BubbleSortActivity;
 import cn.hudp.androiddevartnote.Other.LinkList.LinkActivity;
 import cn.hudp.androiddevartnote.Other.Permission.PermissionActivity;
+import cn.hudp.androiddevartnote.Other.Reflect.ReflectActivity;
+import cn.hudp.androiddevartnote.Other.SuspendActivity;
 import cn.hudp.androiddevartnote.R;
 import cn.hudp.androiddevartnote.RemoveViews_5.RemoteViewsActivity;
 import cn.hudp.androiddevartnote.Retrofit.RetrofitActivity;
 import cn.hudp.androiddevartnote.Synthesis_13.SynthesisActivity;
 import cn.hudp.androiddevartnote.ViewEvent_3.ViewEventActivity;
+import cn.hudp.androiddevartnote.Window_8.FloatWindowService;
 import cn.hudp.androiddevartnote.Window_8.WindowActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         lvMain = (ListView) findViewById(R.id.lv_main);
 
-//        Intent intent = new Intent(MainActivity.this,FloatWindowService.class);
-//        startService(intent);
+        Intent intent = new Intent(MainActivity.this,FloatWindowService.class);
+        startService(intent);
         initData();
     }
 
@@ -63,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
         list.add(new ListInfo("其他 权限管理", PermissionActivity.class));
         list.add(new ListInfo("其他 冒泡排序", BubbleSortActivity.class));
         list.add(new ListInfo("其他 Retrofit", RetrofitActivity.class));
+        list.add(new ListInfo("其他 悬浮Tab效果", SuspendActivity.class));
+        list.add(new ListInfo("其他 反射", ReflectActivity.class));
 
         adapter = new ListAdapter(MainActivity.this, list);
         lvMain.setAdapter(adapter);

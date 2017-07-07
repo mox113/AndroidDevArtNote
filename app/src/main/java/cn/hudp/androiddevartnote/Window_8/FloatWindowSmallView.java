@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.lang.reflect.Field;
 
@@ -105,9 +106,14 @@ public class FloatWindowSmallView extends LinearLayout {
             case MotionEvent.ACTION_UP:
                 // 如果手指离开屏幕时，xDownInScreen和xInScreen相等，且yDownInScreen和yInScreen相等，则视为触发了单击事件。
                 if (xDownInScreen == xInScreen && yDownInScreen == yInScreen) {
-                    Intent intent = getContext().getPackageManager().getLaunchIntentForPackage(FloatWindowService.PACKAGE);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    getContext().startActivity(intent);
+                    try {
+                        Intent intent = getContext().getPackageManager().getLaunchIntentForPackage(FloatWindowService.PACKAGE);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        getContext().startActivity(intent);
+                    } catch (Exception e) {
+                        Toast.makeText(getContext(), "无此应用", Toast.LENGTH_SHORT).show();
+                    }
+
                 }
                 break;
             default:

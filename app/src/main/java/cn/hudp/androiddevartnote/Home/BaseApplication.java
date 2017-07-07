@@ -1,11 +1,15 @@
 package cn.hudp.androiddevartnote.Home;
 
+import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
+import android.os.Bundle;
 import android.support.multidex.MultiDex;
+import android.view.View;
 
 import com.facebook.stetho.Stetho;
 
+import cn.hudp.androiddevartnote.R;
 import cn.hudp.androiddevartnote.Synthesis_13.CrashHandler;
 
 /**
@@ -18,6 +22,46 @@ public class BaseApplication extends Application {
         CrashHandler crashHandler = CrashHandler.getInstance();
         crashHandler.init(this);
         Stetho.initializeWithDefaults(this);
+
+        registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
+            @Override
+            public void onActivityCreated(final Activity activity, Bundle savedInstanceState) {
+                //这里全局给Activity设置toolbar和title,你想象力有多丰富,这里就有多强大,以前放到BaseActivity的操作都可以放到这里
+                View toolbar =  activity.findViewById(R.id.action_bar);
+                if (toolbar != null) { //找到 Toolbar 并且替换 Actionbar
+                    toolbar.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            activity.finish();
+                        }
+                    });
+                }
+            }
+
+            @Override
+            public void onActivityStarted(Activity activity) {
+            }
+
+            @Override
+            public void onActivityResumed(Activity activity) {
+            }
+
+            @Override
+            public void onActivityPaused(Activity activity) {
+            }
+
+            @Override
+            public void onActivityStopped(Activity activity) {
+            }
+
+            @Override
+            public void onActivitySaveInstanceState(Activity activity, Bundle outState) {
+            }
+
+            @Override
+            public void onActivityDestroyed(Activity activity) {
+            }
+        });
     }
 
     @Override
