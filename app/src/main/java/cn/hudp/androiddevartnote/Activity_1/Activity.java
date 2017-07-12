@@ -29,4 +29,9 @@ public class Activity extends AppCompatActivity {
             }
         });
     }
+
+    public void IntentFilterOnclick(View v) {
+        Intent intent = new Intent(Activity.this, IntentFilterActivity.class);
+        startActivity(intent);
+    }
 }

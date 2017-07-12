@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cn.hudp.androiddevartnote">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
     <uses-permission android:name="android.permission.BATTERY_STATS" />
@@ -30,6 +31,7 @@
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:name=".Home.BaseApplication"
@@ -55,7 +57,12 @@
 
         <activity android:name=".ViewEvent_3.ViewEventActivity" />
         <activity android:name=".RemoveViews_5.RemoteViewsActivity" />
-        <activity android:name=".Activity_1.Activity" />
+        <activity android:name=".Activity_1.Activity">
+            <intent-filter>
+                <action android:name="cn.hudp.a" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".Other.LinkList.LinkActivity" />
 
         <receiver android:name=".RemoveViews_5.ImgAppWidgetProvider">
@@ -86,7 +93,9 @@
 
         <service android:name=".Window_8.FloatWindowService" />
 
-        <activity android:name=".Anim_7.SvgAnimActivity"></activity>
+        <activity android:name=".Anim_7.SvgAnimActivity" />
+        <activity android:name=".CustomView.CustomViewActivity"></activity>
+        <activity android:name=".Activity_1.IntentFilterActivity"></activity>
     </application>
 
 </manifest>

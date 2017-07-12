@@ -17,4 +17,11 @@
         android:layout_width="match_parent"
         android:id="@+id/btnStart"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/btnIntentFilter"
+        android:onClick="IntentFilterOnclick"
+        android:text="IntentFilterOnclick"
+        android:layout_height="wrap_content" />
 </LinearLayout>
