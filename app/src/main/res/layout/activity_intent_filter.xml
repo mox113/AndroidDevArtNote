@@ -9,5 +9,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="Click"
-        android:text="隐式跳转" />
+        android:text="隐式跳转（Action category)" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="Click2"
+        android:text="隐式跳转（data)" />
 </LinearLayout>

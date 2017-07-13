@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.zhy.m.permission.MPermissions;
 import com.zhy.m.permission.PermissionDenied;
@@ -100,7 +101,9 @@ public class MainActivity extends AppCompatActivity {
 
     @PermissionDenied(REQUECT_CODE_SDCARD)
     public void requestSdcardFailed() {
-        showDialog();
+//        showDialog();
+        Toast.makeText(getApplicationContext(),
+                "可以前往设置->app->myapp->permission打开权限哦~", Toast.LENGTH_SHORT).show();
     }
 
     private void showDialog() {

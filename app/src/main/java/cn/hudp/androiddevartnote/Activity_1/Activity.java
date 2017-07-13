@@ -1,10 +1,12 @@
 package cn.hudp.androiddevartnote.Activity_1;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import cn.hudp.androiddevartnote.R;
 
@@ -28,6 +30,12 @@ public class Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Uri uri = getIntent().getData();
+        if (uri != null) {
+            String data = uri.getHost();
+            Toast.makeText(getApplicationContext(), data, Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void IntentFilterOnclick(View v) {

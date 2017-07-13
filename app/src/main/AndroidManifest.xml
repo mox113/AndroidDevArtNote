@@ -85,7 +85,19 @@
         <activity android:name=".Synthesis_13.SynthesisActivity" />
         <activity
             android:name=".Activity_1.SingleInstanceActivity"
-            android:launchMode="singleInstance" />
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="cn.hudp.b" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="cn"
+                    android:host="hudp"
+                   />
+            </intent-filter>
+        </activity>
         <activity android:name=".Window_8.WindowActivity" />
         <activity android:name=".Builder.BuilderActivity" />
         <activity android:name=".Retrofit.RetrofitActivity" />
