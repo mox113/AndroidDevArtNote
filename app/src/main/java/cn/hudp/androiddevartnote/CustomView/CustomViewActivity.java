@@ -2,6 +2,7 @@ package cn.hudp.androiddevartnote.CustomView;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
 import cn.hudp.androiddevartnote.R;
 
 public class CustomViewActivity extends AppCompatActivity {

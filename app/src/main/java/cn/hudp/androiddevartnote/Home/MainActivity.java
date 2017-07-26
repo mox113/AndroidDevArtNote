@@ -1,10 +1,8 @@
 package cn.hudp.androiddevartnote.Home;
 
 import android.Manifest;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -16,9 +14,10 @@ import com.zhy.m.permission.PermissionGrant;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.hudp.androiddevartnote.Activity_1.Activity;
+import cn.hudp.androiddevartnote.Activity_1.SingleInstanceActivity;
 import cn.hudp.androiddevartnote.Anim_7.AnimActivity;
 import cn.hudp.androiddevartnote.Builder.BuilderActivity;
+import cn.hudp.androiddevartnote.CustomView.CustomViewActivity;
 import cn.hudp.androiddevartnote.Drawable_6.DrawableActivity;
 import cn.hudp.androiddevartnote.IPC_2.IPC2Activity;
 import cn.hudp.androiddevartnote.Other.BinaryTree.BinaryTreeActivity;
@@ -56,7 +55,8 @@ public class MainActivity extends AppCompatActivity {
     private void initData() {
         list = new ArrayList<>();
 
-        list.add(new ListInfo("第1章 Activity的生命周期和启动模式", Activity.class));
+        list.add(new ListInfo("其他 自定义View", CustomViewActivity.class));
+        list.add(new ListInfo("第1章 Activity的生命周期和启动模式", SingleInstanceActivity.class));
         list.add(new ListInfo("第2章 IPC机制", IPC2Activity.class));
         list.add(new ListInfo("第3章 View事件体系", ViewEventActivity.class));
         list.add(new ListInfo("第4章 View的工作原理", null));
@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(new ListInfo("其他 悬浮Tab效果", SuspendActivity.class));
         list.add(new ListInfo("其他 反射", ReflectActivity.class));
         list.add(new ListInfo("其他 状态栏", StatusBarActivity.class));
+
 
         adapter = new ListAdapter(MainActivity.this, list);
         lvMain.setAdapter(adapter);
@@ -101,17 +102,16 @@ public class MainActivity extends AppCompatActivity {
 
     @PermissionDenied(REQUECT_CODE_SDCARD)
     public void requestSdcardFailed() {
-//        showDialog();
-        Toast.makeText(getApplicationContext(),
-                "可以前往设置->app->myapp->permission打开权限哦~", Toast.LENGTH_SHORT).show();
+        showDialog();
     }
 
     private void showDialog() {
-        AlertDialog dialog = new AlertDialog.Builder(this).setTitle("还可以手动开启哦~").setMessage("可以前往设置->app->myapp->permission打开").setPositiveButton("确定!", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-            }
-        }).show();
+//        AlertDialog dialog = new AlertDialog.Builder(this).setTitle("还可以手动开启哦~").setMessage("可以前往设置->app->myapp->permission打开").setPositiveButton("确定!", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//            }
+//        }).show();
+        Toast.makeText(getApplicationContext(),"权限被禁止，如需要可前往权限管理中打开",Toast.LENGTH_SHORT).show();
     }
 
 }
