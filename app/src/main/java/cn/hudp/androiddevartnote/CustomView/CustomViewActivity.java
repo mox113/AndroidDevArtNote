@@ -1,7 +1,7 @@
 package cn.hudp.androiddevartnote.CustomView;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import cn.hudp.androiddevartnote.R;
 
