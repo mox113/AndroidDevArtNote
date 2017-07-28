@@ -111,7 +111,7 @@ public class FloatWindowSmallView extends LinearLayout {
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         getContext().startActivity(intent);
                     } catch (Exception e) {
-                        Toast.makeText(getContext(), "无此应用", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "木有安装", Toast.LENGTH_SHORT).show();
                     }
 
                 }

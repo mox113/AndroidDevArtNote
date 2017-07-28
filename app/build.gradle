@@ -38,4 +38,6 @@ dependencies {
     compile 'com.android.support:design:26.0.0-alpha1'
     compile 'com.zhy:mpermission-api:1.0.0'
     apt 'com.zhy:mpermission-compiler:1.0.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+    compile 'io.reactivex:rxandroid:1.2.1'
 }
