@@ -15,6 +15,7 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import rx.Observer;
+import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
@@ -26,8 +27,21 @@ public class RetrofitActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_retrofit);
         tv = (TextView) findViewById(R.id.tv);
-        postRetrofit();
-        postRetrofitToRxJava();
+//        postRetrofit();
+//        postRetrofitToRxJava();
+        Subscriber subscriber = new ProgressSubscriber<DoubanMovieEntity>(getApplicationContext()) {
+            @Override
+            public void onError(Throwable e) {
+                super.onError(e);
+            }
+
+            @Override
+            public void onNext(DoubanMovieEntity doubanMovieEntity) {
+                Log.e("RetrofitActivity", "onNext");
+                tv.setText(doubanMovieEntity.toString());
+            }
+        };
+        HttpMethods.getInstance().getTopMovie(subscriber,1,10);
     }
 
     private void postRetrofitToRxJava() {
