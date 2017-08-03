@@ -26,6 +26,7 @@ import cn.hudp.androiddevartnote.Other.LinkList.LinkActivity;
 import cn.hudp.androiddevartnote.Other.Permission.PermissionActivity;
 import cn.hudp.androiddevartnote.Other.Reflect.ReflectActivity;
 import cn.hudp.androiddevartnote.Other.StatusBar.StatusBarActivity;
+import cn.hudp.androiddevartnote.Other.Suspend.Suspend2Activity;
 import cn.hudp.androiddevartnote.Other.Suspend.SuspendActivity;
 import cn.hudp.androiddevartnote.R;
 import cn.hudp.androiddevartnote.RemoveViews_5.RemoteViewsActivity;
@@ -76,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(new ListInfo("其他 冒泡排序", BubbleSortActivity.class));
         list.add(new ListInfo("其他 Retrofit", RetrofitActivity.class));
         list.add(new ListInfo("其他 悬浮Tab效果", SuspendActivity.class));
+        list.add(new ListInfo("其他 悬浮Tab效果2", Suspend2Activity.class));
         list.add(new ListInfo("其他 反射", ReflectActivity.class));
         list.add(new ListInfo("其他 状态栏", StatusBarActivity.class));
 
