@@ -1,4 +1,4 @@
-package cn.hudp.androiddevartnote.Retrofit;
+package cn.hudp.androiddevartnote.RetrofitRxJava;
 
 import android.content.Context;
 import android.widget.Toast;

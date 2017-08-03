@@ -1,4 +1,4 @@
-package cn.hudp.androiddevartnote.Retrofit;
+package cn.hudp.androiddevartnote.RetrofitRxJava;
 
 import java.util.List;
 

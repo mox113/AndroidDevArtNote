@@ -1,4 +1,4 @@
-package cn.hudp.androiddevartnote.Retrofit;
+package cn.hudp.androiddevartnote.RetrofitRxJava;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -22,6 +22,7 @@ import rx.schedulers.Schedulers;
 public class RetrofitActivity extends AppCompatActivity {
     private static final String baseUrl = "https://api.douban.com/v2/";
     private TextView tv;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +42,8 @@ public class RetrofitActivity extends AppCompatActivity {
                 tv.setText(doubanMovieEntity.toString());
             }
         };
-        HttpMethods.getInstance().getTopMovie(subscriber,1,10);
+//        subscriber.unsubscribe();//取消订阅
+        HttpMethods.getInstance().getTopMovie(subscriber, 1, 10);
     }
 
     private void postRetrofitToRxJava() {
@@ -51,7 +53,7 @@ public class RetrofitActivity extends AppCompatActivity {
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
         API api = retrofit.create(API.class);
-        api.getTopMovie2(1,10)
+        api.getTopMovie2(1, 10)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<DoubanMovieEntity>() {
@@ -84,9 +86,9 @@ public class RetrofitActivity extends AppCompatActivity {
         call.enqueue(new Callback<DoubanMovieEntity>() {
             @Override
             public void onResponse(Call<DoubanMovieEntity> call, Response<DoubanMovieEntity> response) {
-                if(response!=null) {
+                if (response != null) {
                     Log.e("POST Succ", response.body().toString());
-                }else{
+                } else {
                     Log.e("POST Error", "返回null");
                 }
             }

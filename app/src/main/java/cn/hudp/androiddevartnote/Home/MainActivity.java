@@ -22,6 +22,7 @@ import cn.hudp.androiddevartnote.Drawable_6.DrawableActivity;
 import cn.hudp.androiddevartnote.IPC_2.IPC2Activity;
 import cn.hudp.androiddevartnote.Other.BinaryTree.BinaryTreeActivity;
 import cn.hudp.androiddevartnote.Other.BubbleSort.BubbleSortActivity;
+import cn.hudp.androiddevartnote.Other.Java2JS.Java2JsActivity;
 import cn.hudp.androiddevartnote.Other.LinkList.LinkActivity;
 import cn.hudp.androiddevartnote.Other.Permission.PermissionActivity;
 import cn.hudp.androiddevartnote.Other.Reflect.ReflectActivity;
@@ -30,7 +31,8 @@ import cn.hudp.androiddevartnote.Other.Suspend.Suspend2Activity;
 import cn.hudp.androiddevartnote.Other.Suspend.SuspendActivity;
 import cn.hudp.androiddevartnote.R;
 import cn.hudp.androiddevartnote.RemoveViews_5.RemoteViewsActivity;
-import cn.hudp.androiddevartnote.Retrofit.RetrofitActivity;
+import cn.hudp.androiddevartnote.RetrofitRxJava.RetrofitActivity;
+import cn.hudp.androiddevartnote.RetrofitRxJava.RxJavaActivity;
 import cn.hudp.androiddevartnote.Synthesis_13.SynthesisActivity;
 import cn.hudp.androiddevartnote.ViewEvent_3.ViewEventActivity;
 import cn.hudp.androiddevartnote.Window_8.FloatWindowService;
@@ -75,11 +77,13 @@ public class MainActivity extends AppCompatActivity {
         list.add(new ListInfo("其他 二叉树", BinaryTreeActivity.class));
         list.add(new ListInfo("其他 权限管理", PermissionActivity.class));
         list.add(new ListInfo("其他 冒泡排序", BubbleSortActivity.class));
+        list.add(new ListInfo("其他 RxJava", RxJavaActivity.class));
         list.add(new ListInfo("其他 Retrofit", RetrofitActivity.class));
         list.add(new ListInfo("其他 悬浮Tab效果", SuspendActivity.class));
         list.add(new ListInfo("其他 悬浮Tab效果2", Suspend2Activity.class));
         list.add(new ListInfo("其他 反射", ReflectActivity.class));
         list.add(new ListInfo("其他 状态栏", StatusBarActivity.class));
+        list.add(new ListInfo("其他 Java与Html(Js)交互", Java2JsActivity.class));
 
         adapter = new ListAdapter(MainActivity.this, list);
         lvMain.setAdapter(adapter);
@@ -112,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
 //            public void onClick(DialogInterface dialog, int which) {
 //            }
 //        }).show();
-        Toast.makeText(getApplicationContext(),"权限被禁止，如需要可前往权限管理中打开",Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "权限被禁止，如需要可前往权限管理中打开", Toast.LENGTH_SHORT).show();
     }
 
 }

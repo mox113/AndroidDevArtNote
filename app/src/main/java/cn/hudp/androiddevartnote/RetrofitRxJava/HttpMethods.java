@@ -1,4 +1,4 @@
-package cn.hudp.androiddevartnote.Retrofit;
+package cn.hudp.androiddevartnote.RetrofitRxJava;
 
 import java.util.concurrent.TimeUnit;
 
@@ -64,9 +64,8 @@ public class HttpMethods {
                         return doubanMovieEntity;
                     }
                 })
-                .subscribeOn(Schedulers.io())
-                .unsubscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())//改变订阅的线程 call执行的线程 也就是这里的getTopMovie2执行的线程
+                .observeOn(AndroidSchedulers.mainThread())//改变发送的线程 onNext执行的线程
                 .subscribe(subscriber);
     }
 }
