@@ -40,6 +40,7 @@ public class Suspend2Activity extends AppCompatActivity {
 
         initView();
 
+//        int i = 1 / 0;
         appBar.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
@@ -78,7 +79,7 @@ public class Suspend2Activity extends AppCompatActivity {
     private void initRecyclerView() {
         mStringList = new ArrayList<>();
         for (int i = 0; i < 30; i++) {
-            mStringList.add("测试：" + i);
+            mStringList.add("修改后的title：" + i);
         }
         mAdapter = new CommonRecyclerAdapter<String>(this, mStringList, R.layout.item_suspend_layout) {
             @Override

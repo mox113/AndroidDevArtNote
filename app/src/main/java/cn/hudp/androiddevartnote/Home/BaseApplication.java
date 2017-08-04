@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.facebook.stetho.Stetho;
-import com.tencent.bugly.Bugly;
 import com.tencent.tinker.loader.app.TinkerApplication;
 import com.tencent.tinker.loader.shareutil.ShareConstants;
 
@@ -27,7 +26,7 @@ public class BaseApplication extends TinkerApplication {
         super.onCreate();
 //        CrashHandler crashHandler = CrashHandler.getInstance();
 //        crashHandler.init(this);
-        Bugly.init(this, "55ff8a76e1", true);
+//        Bugly.init(this, "55ff8a76e1", true);
         Stetho.initializeWithDefaults(this);
 
         registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
