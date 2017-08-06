@@ -22,4 +22,9 @@ public class StatusBarActivity extends AppCompatActivity {
         StatusBarUtil.StatusBarLightMode(this);
     }
 
+
+//    public void changeColor2(View view) {
+//        Toast.makeText(this, "状态栏透明", Toast.LENGTH_SHORT).show();
+//        StatusBarUtil.transparencyBar(this);
+//    }
 }
