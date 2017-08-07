@@ -89,7 +89,7 @@ public class SuspendActivity extends AppCompatActivity {
     private void initRecyclerView() {
         mStringList = new ArrayList<>();
         for (int i = 0; i < 30; i++) {
-            mStringList.add("Tinker 修改后的title：" + i);
+            mStringList.add("Tinker " + i);
         }
         mAdapter = new CommonRecyclerAdapter<String>(this, mStringList, R.layout.item_suspend_layout) {
             @Override

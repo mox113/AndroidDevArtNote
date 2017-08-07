@@ -1,32 +1,30 @@
 package cn.hudp.androiddevartnote.Home;
 
 import android.app.Activity;
-import android.app.Application;
-import android.content.Context;
 import android.os.Bundle;
-import android.support.multidex.MultiDex;
 import android.view.View;
 
-import com.tencent.bugly.Bugly;
-import com.tencent.bugly.beta.Beta;
+import com.tencent.tinker.loader.app.TinkerApplication;
+import com.tencent.tinker.loader.shareutil.ShareConstants;
 
+import cn.hudp.androiddevartnote.HotFix.SampleApplicationLike;
 import cn.hudp.androiddevartnote.R;
 
 /**
  * Created by HuDP on 16/6/2.
  */
-public class BaseApplication extends Application {
-//    public BaseApplication() {
-//        super(ShareConstants.TINKER_ENABLE_ALL, "cn.hudp.androiddevartnote.HotFix.SampleApplicationLike",
-//                "com.tencent.tinker.loader.TinkerLoader", false);
-//    }
+public class BaseApplication extends TinkerApplication {
+    public BaseApplication() {
+        super(ShareConstants.TINKER_ENABLE_ALL, SampleApplicationLike.class.getName(),
+                "com.tencent.tinker.loader.TinkerLoader", false);
+    }
 
     @Override
     public void onCreate() {
         super.onCreate();
 //        CrashHandler crashHandler = CrashHandler.getInstance();
 //        crashHandler.init(this);
-        Bugly.init(this, "55ff8a76e1", true);
+//        Bugly.init(this, "55ff8a76e1", true);
 //        Stetho.initializeWithDefaults(this);
 
         registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
@@ -70,11 +68,11 @@ public class BaseApplication extends Application {
         });
     }
 
-    @Override
-    protected void attachBaseContext(Context base) {
-        super.attachBaseContext(base);
-        MultiDex.install(this);
-        // 安装tinker
-        Beta.installTinker();
-    }
+//    @Override
+//    protected void attachBaseContext(Context base) {
+//        super.attachBaseContext(base);
+//        MultiDex.install(this);
+//        // 安装tinker
+//        Beta.installTinker();
+//    }
 }

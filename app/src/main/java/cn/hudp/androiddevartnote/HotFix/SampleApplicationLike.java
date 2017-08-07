@@ -16,7 +16,6 @@ import com.tencent.tinker.loader.app.DefaultApplicationLike;
  */
 
 public class SampleApplicationLike extends DefaultApplicationLike {
-
     public static final String TAG = "Tinker.SampleApplicationLike";
 
     public SampleApplicationLike(Application application, int tinkerFlags,

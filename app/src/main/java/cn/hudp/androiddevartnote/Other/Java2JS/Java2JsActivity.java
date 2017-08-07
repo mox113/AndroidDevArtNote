@@ -28,7 +28,7 @@ public class Java2JsActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String color = "#abcdef";
+                String color = "#abcdaa";
                 webView.loadUrl("javascript: changeColor('" + color + "')");
             }
         });
