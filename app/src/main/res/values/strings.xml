@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">《Android Dev Art》"</string>
+    <string name="app_name">《Android Dev Art Note》"</string>
     <string name="large_text">1、前言\n
 在上一版本App临发版之前，QA和PM同学同时报了一个严重的Bug：App退出之后会自动重新启动，也就是用户关不了App。\n开发者梦寐以求的应用常驻就这么被莫名其妙的实现了！当然这是句玩笑，估计用户会直接了当卸载才是真的。
 我们项目里确实也有应用保活的策略，但是并不流氓，更不会无厘头的在用户主动关闭App的时候重启。
