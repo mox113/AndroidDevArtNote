@@ -24,11 +24,13 @@
         android:layout_height="wrap_content"
         android:onClick="singleTopOnClick"
         android:text="singleTop(栈顶复用模式)" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="singleTaskOnClick"
         android:text="singleTask(栈内复用模式)" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
