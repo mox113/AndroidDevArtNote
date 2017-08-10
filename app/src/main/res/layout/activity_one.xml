@@ -11,18 +11,43 @@
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"  />
-
-    <Button
-        android:layout_width="match_parent"
-        android:id="@+id/btnStart"
-        android:text="SingleInstance"
         android:layout_height="wrap_content" />
 
     <Button
         android:layout_width="match_parent"
-        android:id="@+id/btnIntentFilter"
+        android:layout_height="wrap_content"
+        android:onClick="standardOnClick"
+        android:text="standard(标准模式)" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="singleTopOnClick"
+        android:text="singleTop(栈顶复用模式)" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="singleTaskOnClick"
+        android:text="singleTask(栈内复用模式)" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="SingleInstanceOnClick"
+        android:text="Single  Instance" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:onClick="IntentFilterOnclick"
-        android:text="Intent Filter"
-        android:layout_height="wrap_content" />
+        android:text="Intent  Filter" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </ScrollView>
 </LinearLayout>

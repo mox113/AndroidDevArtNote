@@ -14,7 +14,7 @@ import com.zhy.m.permission.PermissionGrant;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.hudp.androiddevartnote.Activity_1.SingleInstanceActivity;
+import cn.hudp.androiddevartnote.Activity_1.Activity;
 import cn.hudp.androiddevartnote.Anim_7.AnimActivity;
 import cn.hudp.androiddevartnote.Builder.BuilderActivity;
 import cn.hudp.androiddevartnote.CustomView.CustomViewActivity;
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         list = new ArrayList<>();
 
         list.add(new ListInfo("其他 自定义View", CustomViewActivity.class));
-        list.add(new ListInfo("第1章 Activity的生命周期和启动模式", SingleInstanceActivity.class));
+        list.add(new ListInfo("第1章 Activity的生命周期和启动模式", Activity.class));
         list.add(new ListInfo("第2章 IPC机制", IPC2Activity.class));
         list.add(new ListInfo("第3章 View事件体系", ViewEventActivity.class));
         list.add(new ListInfo("第4章 View的工作原理", null));
