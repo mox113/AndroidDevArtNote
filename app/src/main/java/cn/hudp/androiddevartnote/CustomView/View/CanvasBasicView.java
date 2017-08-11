@@ -61,9 +61,20 @@ public class CanvasBasicView extends View {
         paint.setStrokeJoin(Paint.Join.MITER);
         canvas.drawLine(300, 70, 450, 190, paint);
 
-        paint.setColor(Color.parseColor("#E91E63"));
+        paint.setColor(Color.parseColor("#cccccc"));
         paint.setTextSize(24);
         canvas.drawText("HenCoder", 500, 130, paint);
+
+        paint.setColor(Color.parseColor("#abcdaa"));
+        paint.setStyle(Paint.Style.FILL);
+        Path mPath = new Path();
+        // 连接路径到点
+        mPath.moveTo(100, 100);
+        mPath.lineTo(300, 100);
+        mPath.lineTo(400, 200);
+        mPath.lineTo(200, 200);
+        // 绘制路径
+        canvas.drawPath(mPath, paint);
 
         // y 250
         canvas.drawText("1.1.1.2 setARGB", paddingLeft1, 235, textPaint);
@@ -156,14 +167,6 @@ public class CanvasBasicView extends View {
 
         canvas.drawText("1.2.3 ColorMatrixColorFilter", paddingLeft2, 2320, textPaint);
 
-        paint.setStyle(Paint.Style.FILL);
-        Path mPath = new Path();
-        // 连接路径到点
-        mPath.moveTo(100, 100);
-        mPath.lineTo(300, 100);
-        mPath.lineTo(400, 200);
-        mPath.lineTo(200, 200);
-        // 绘制路径
-        canvas.drawPath(mPath, paint);
+
     }
 }
