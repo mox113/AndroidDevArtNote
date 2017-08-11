@@ -33,6 +33,7 @@ import cn.hudp.androiddevartnote.RemoveViews_5.RemoteViewsActivity;
 import cn.hudp.androiddevartnote.RetrofitRxJava.RetrofitActivity;
 import cn.hudp.androiddevartnote.RetrofitRxJava.RxJavaActivity;
 import cn.hudp.androiddevartnote.Synthesis_13.SynthesisActivity;
+import cn.hudp.androiddevartnote.UpdateApp.UpdateAppService;
 import cn.hudp.androiddevartnote.ViewEvent_3.ViewEventActivity;
 import cn.hudp.androiddevartnote.Window_8.FloatWindowService;
 import cn.hudp.androiddevartnote.Window_8.WindowActivity;
@@ -49,8 +50,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         lvMain = (ListView) findViewById(R.id.lv_main);
 
-        MPermissions.requestPermissions(MainActivity.this, REQUECT_CODE_SDCARD, Manifest.permission.SYSTEM_ALERT_WINDOW);
+        MPermissions.requestPermissions(MainActivity.this, REQUECT_CODE_SDCARD, Manifest.permission.SYSTEM_ALERT_WINDOW,
+                Manifest.permission.MOUNT_UNMOUNT_FILESYSTEMS, Manifest.permission.WRITE_EXTERNAL_STORAGE);
         initData();
+//        updateApp();
+    }
+
+    private void updateApp() {
+        UpdateAppService.start(getApplicationContext(),"酷安","发现应用的乐趣",
+                "http://dl-cdn.coolapkmarket.com/down/apk_file/2017/0808/com.coolapk.market-7.9.6-1708082-0808.apk?_upt=935ff76a1502423434");
     }
 
     private void initData() {

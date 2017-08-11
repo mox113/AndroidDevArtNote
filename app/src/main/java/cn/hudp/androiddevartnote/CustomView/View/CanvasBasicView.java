@@ -11,6 +11,7 @@ import android.graphics.ComposeShader;
 import android.graphics.LightingColorFilter;
 import android.graphics.LinearGradient;
 import android.graphics.Paint;
+import android.graphics.Path;
 import android.graphics.PorterDuff;
 import android.graphics.RadialGradient;
 import android.graphics.Shader;
@@ -151,8 +152,18 @@ public class CanvasBasicView extends View {
 
         canvas.drawBitmap(bitmap, paddingLeft2 + 200, 2040 + 30, paint);
 
-        canvas.drawText("1.2.2 PorterDuffColorFilter", paddingLeft2, 2260 , textPaint);
+        canvas.drawText("1.2.2 PorterDuffColorFilter", paddingLeft2, 2260, textPaint);
 
         canvas.drawText("1.2.3 ColorMatrixColorFilter", paddingLeft2, 2320, textPaint);
+
+        paint.setStyle(Paint.Style.FILL);
+        Path mPath = new Path();
+        // 连接路径到点
+        mPath.moveTo(100, 100);
+        mPath.lineTo(300, 100);
+        mPath.lineTo(400, 200);
+        mPath.lineTo(200, 200);
+        // 绘制路径
+        canvas.drawPath(mPath, paint);
     }
 }
