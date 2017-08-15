@@ -33,7 +33,7 @@ import cn.hudp.androiddevartnote.RemoveViews_5.RemoteViewsActivity;
 import cn.hudp.androiddevartnote.RetrofitRxJava.RetrofitActivity;
 import cn.hudp.androiddevartnote.RetrofitRxJava.RxJavaActivity;
 import cn.hudp.androiddevartnote.Synthesis_13.SynthesisActivity;
-import cn.hudp.androiddevartnote.UpdateApp.UpdateAppService;
+import cn.hudp.androiddevartnote.UpdateApp.UploadAppActivity;
 import cn.hudp.androiddevartnote.ViewEvent_3.ViewEventActivity;
 import cn.hudp.androiddevartnote.Window_8.FloatWindowService;
 import cn.hudp.androiddevartnote.Window_8.WindowActivity;
@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
     protected ListAdapter adapter;
     protected List<ListInfo> list;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,17 +55,12 @@ public class MainActivity extends AppCompatActivity {
         MPermissions.requestPermissions(MainActivity.this, REQUECT_CODE_SDCARD, Manifest.permission.SYSTEM_ALERT_WINDOW,
                 Manifest.permission.MOUNT_UNMOUNT_FILESYSTEMS, Manifest.permission.WRITE_EXTERNAL_STORAGE);
         initData();
-//        updateApp();
-    }
-
-    private void updateApp() {
-        UpdateAppService.start(getApplicationContext(),"酷安","发现应用的乐趣",
-                "http://dl-cdn.coolapkmarket.com/down/apk_file/2017/0808/com.coolapk.market-7.9.6-1708082-0808.apk?_upt=935ff76a1502423434");
     }
 
     private void initData() {
         list = new ArrayList<>();
 
+        list.add(new ListInfo("其他 更新应用", UploadAppActivity.class));
         list.add(new ListInfo("其他 自定义View", CustomViewActivity.class));
         list.add(new ListInfo("第1章 Activity的生命周期和启动模式", Activity.class));
         list.add(new ListInfo("第2章 IPC机制", IPC2Activity.class));
@@ -117,12 +114,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showDialog() {
-//        AlertDialog dialog = new AlertDialog.Builder(this).setTitle("还可以手动开启哦~").setMessage("可以前往设置->app->myapp->permission打开").setPositiveButton("确定!", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialog, int which) {
-//            }
-//        }).show();
         Toast.makeText(getApplicationContext(), "权限被禁止，如需要可前往权限管理中打开", Toast.LENGTH_SHORT).show();
     }
+
 
 }

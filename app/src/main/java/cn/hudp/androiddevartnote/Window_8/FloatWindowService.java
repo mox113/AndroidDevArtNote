@@ -9,7 +9,7 @@ import android.os.IBinder;
  */
 
 public class FloatWindowService extends Service {
-    public static final String PS_PACKAGE = "com.tencent.isux.psplay";
+    public static final String PS_PACKAGE = "com.zhy.bsdiff_and_patch";//com.tencent.isux.psplay
     public static final String NOTE_PACKAGE = "cn.hudp.androiddevartnote";
     public static final String PACKAGE = PS_PACKAGE;
     @Override

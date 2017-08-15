@@ -33,7 +33,7 @@
     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
-
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
 
     <application
         android:name=".Home.BaseApplication"
@@ -47,10 +47,21 @@
             android:authorities="${applicationId}.FileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
+
+            <!-- 元数据 -->
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/update_files" />
         </provider>
+
+        <receiver android:name=".UpdateApp.ApkInstallReceiver">
+            <intent-filter>
+
+                <!-- 配置 点击通知 和 下载完成 两个 action -->
+                <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED" />
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
 
         <activity android:name=".Home.MainActivity">
             <intent-filter>
@@ -72,6 +83,7 @@
         <activity android:name=".Activity_1.Activity">
             <intent-filter>
                 <action android:name="cn.hudp.a" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -116,28 +128,16 @@
         <service android:name=".Window_8.FloatWindowService" />
 
         <activity android:name=".Anim_7.SvgAnimActivity" />
-        <activity android:name=".CustomView.CustomViewActivity"></activity>
-        <activity android:name=".Activity_1.IntentFilterActivity"></activity>
+        <activity android:name=".CustomView.CustomViewActivity" />
+        <activity android:name=".Activity_1.IntentFilterActivity" />
         <activity android:name=".Other.Java2JS.Java2JsActivity" />
         <activity
             android:name=".Other.Suspend.SuspendActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <service android:name=".UpdateApp.UpdateAppService" />
-        <!--<activity-->
-        <!--android:name="com.tencent.bugly.beta.ui.BetaActivity"-->
-        <!--android:configChanges="keyboardHidden|orientation|screenSize|locale"-->
-        <!--android:theme="@android:style/Theme.Translucent" />-->
 
-        <!--<provider-->
-        <!--android:name="android.support.v4.content.FileProvider"-->
-        <!--android:authorities="${applicationId}.fileProvider"-->
-        <!--android:exported="false"-->
-        <!--android:grantUriPermissions="true">-->
-        <!--<meta-data-->
-        <!--android:name="android.support.FILE_PROVIDER_PATHS"-->
-        <!--android:resource="@xml/provider_paths"/>-->
-        <!--</provider>-->
+        <activity android:name=".UpdateApp.UploadAppActivity"></activity>
     </application>
 
 </manifest>

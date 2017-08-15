@@ -14,6 +14,10 @@ android {
         versionName "1.0.2"
 
         multiDexEnabled true
+
+        ndk {
+            moduleName = 'bsdiff'
+        }
     }
     buildTypes {
         release {
@@ -47,7 +51,6 @@ android {
         }
 
         debug {
-//            storeFile file("./keystore/debug.keystore")
             storeFile file("./keystore/debug.keystore")
         }
     }
@@ -66,10 +69,15 @@ android {
         }
     }
 
-    sourceSets {
-        main {
-            jniLibs.srcDirs = ['libs']
-        }
+//    sourceSets {
+//        main {
+//            jniLibs.srcDirs = ['libs']
+//        }
+//    }
+
+    sourceSets.main {
+        jniLibs.srcDir 'libs'
+//        jni.srcDirs = []
     }
 
     repositories {
@@ -81,7 +89,6 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    //权限
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:multidex:1.0.1'
     compile 'com.android.support:cardview-v7:25.2.0'
@@ -96,8 +103,7 @@ dependencies {
     compile 'com.facebook.stetho:stetho:1.4.2'
     compile 'com.facebook.stetho:stetho-okhttp3:1.4.2'
     compile 'com.zhy:mpermission-api:1.0.0'
-    apt 'com.zhy:mpermission-compiler:1.0.0'
-
-    compile 'com.tencent.bugly:crashreport_upgrade:1.3.1' //bugly
+    compile 'com.tencent.bugly:crashreport_upgrade:1.3.1'
     compile 'io.reactivex:rxandroid:1.2.1'
+    apt 'com.zhy:mpermission-compiler:1.0.0'
 }
