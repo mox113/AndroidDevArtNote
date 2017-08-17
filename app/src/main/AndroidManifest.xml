@@ -47,7 +47,6 @@
             android:authorities="${applicationId}.FileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
-
             <!-- 元数据 -->
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
@@ -56,7 +55,6 @@
 
         <receiver android:name=".UpdateApp.ApkInstallReceiver">
             <intent-filter>
-
                 <!-- 配置 点击通知 和 下载完成 两个 action -->
                 <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED" />
                 <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
@@ -135,7 +133,7 @@
             android:name=".Other.Suspend.SuspendActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
-        <service android:name=".UpdateApp.UpdateAppService" />
+        <service android:name=".UpdateApp.DownloadService" />
 
         <activity android:name=".UpdateApp.UploadAppActivity"></activity>
     </application>

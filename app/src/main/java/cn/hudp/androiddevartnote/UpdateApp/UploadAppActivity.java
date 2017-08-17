@@ -24,7 +24,7 @@ public class UploadAppActivity extends AppCompatActivity {
     }
 
     public void InstallApp(View view) {
-        UpdateAppService.start(getApplicationContext(), "应用宝.apk", "发现应用的乐趣",
+        DownloadService.start(getApplicationContext(), "应用宝.apk", "发现应用的乐趣",
                 "http://121.15.220.140/download.sj.qq.com/upload/connAssitantDownload/upload/MobileAssistant_1.apk?mkey=59917e34f200372f&f=e518&c=0&p=.apk");
     }
 

@@ -6,12 +6,11 @@ import android.content.pm.ApplicationInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
-import android.util.Log;
 
 import java.io.File;
 
 /**
- * Created by zhy on 16/10/7.
+ * Created by HuDP
  */
 public class ApkExtract {
     @RequiresApi(api = Build.VERSION_CODES.DONUT)
@@ -19,7 +18,6 @@ public class ApkExtract {
         context = context.getApplicationContext();
         ApplicationInfo applicationInfo = context.getApplicationInfo();
         String apkPath = applicationInfo.sourceDir;
-        Log.e("hongyang", apkPath);
         return apkPath;
     }
 
@@ -29,6 +27,5 @@ public class ApkExtract {
         i.setDataAndType(Uri.fromFile(new File(apkPath)),
                 "application/vnd.android.package-archive");
         context.startActivity(i);
-        android.os.Process.killProcess(android.os.Process.myPid());
     }
 }

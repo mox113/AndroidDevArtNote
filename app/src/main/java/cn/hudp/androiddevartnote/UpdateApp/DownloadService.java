@@ -14,7 +14,7 @@ import java.io.File;
 /**
  * Created by HuDP on 2017/8/11.
  */
-public class UpdateAppService extends Service {
+public class DownloadService extends Service {
     public static final String FILE_DOC_PATH = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Download";
     private static final String  TITLE = "TITLE", CONTENT = "CONTENT", URL = "URL";
 
@@ -25,7 +25,7 @@ public class UpdateAppService extends Service {
     }
 
     public static void start(Context context, String title, String content, String url) {
-        Intent intent = new Intent(context, UpdateAppService.class);
+        Intent intent = new Intent(context, DownloadService.class);
         intent.putExtra(TITLE, title);
         intent.putExtra(CONTENT, content);
         intent.putExtra(URL, url);
